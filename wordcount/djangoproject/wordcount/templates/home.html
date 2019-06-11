@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wordcount</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style type="text/css">
+        body{
+            text-align: center;
+            background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/51/46/455791b2b798c27.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: #FFF;
+            font-family: 'Lato', sans-serif;  
+        }
+
+        .container{
+            margin-top: 50px;
+        }
+
+        h1{
+            font-weight: bold;
+        }
+
+        h3{
+            font-style: Italic;
+        }
+
+        input{
+            width: 350px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 17.5px;
+            border: solid 1.5px #000;
+        }
+
+        textarea{
+        width: 750px;
+        font-size: 17.5px;
+        border: solid 1.5px #000;
+        padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+        <div class = "container">
+          <h1>WORD COUNTER</h1>
+          <h2>여기서 글자 수를 셀 수 있습니다!</h2>
+
+          <h3><a href="{%url 'about'%}" class=link>ABOUT</a></h3>
+              
+          <div class = "input">
+                <form action="{%url 'result'%}">
+                        <textarea cols="40" rows="10" name="fulltext"></textarea>
+                        <br>
+                        <input type="submit" value="Count!">
+                </form>
+          </div>  
+        </div> 
+</body>
+</html>
